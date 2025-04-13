@@ -6,7 +6,6 @@
 #include <fstream>
 #include <sstream>
 
-// Calcular coeficiente binomial
 unsigned long long calcularBinomial(int n, int r) {
     if (r > n - r) r = n - r;
     unsigned long long resultado = 1;
@@ -17,7 +16,6 @@ unsigned long long calcularBinomial(int n, int r) {
     return resultado;
 }
 
-// Mostrar combinación en consola con formato a<b<c
 std::string formatearCombinacion(const std::vector<std::string>& combinacion) {
     std::string resultado = "(";
     for (size_t i = 0; i < combinacion.size(); ++i) {
@@ -28,7 +26,6 @@ std::string formatearCombinacion(const std::vector<std::string>& combinacion) {
     return resultado;
 }
 
-// Convertir combinación a línea CSV
 std::string combinacionToCSV(const std::vector<std::string>& combinacion) {
     std::string resultado;
     for (size_t i = 0; i < combinacion.size(); ++i) {
@@ -38,7 +35,6 @@ std::string combinacionToCSV(const std::vector<std::string>& combinacion) {
     return resultado;
 }
 
-// Generar combinaciones
 void generarCombinaciones(int n, int r, const std::vector<std::string>& palabras) {
     if (n < 1 || r < 0 || r > n) {
         std::cout << "Error: Valores invalidos. Debe cumplirse n >= 1, 0 <= r <= n.\n";
